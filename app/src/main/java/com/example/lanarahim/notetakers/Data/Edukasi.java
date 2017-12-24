@@ -6,4 +6,19 @@ package com.example.lanarahim.notetakers.Data;
 
 public class Edukasi extends Note{
 
+
+    @Override
+    public void tambahnote() {
+
+    }
+
+    @Override
+    public void updatenote() {
+
+    }
+
+    @Override
+    public void hapusnote() {
+
+    }
 }

@@ -1,11 +1,14 @@
 package com.example.lanarahim.notetakers;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.lanarahim.notetakers.Data.Pribadi;
 
 import java.util.ArrayList;
 
@@ -14,20 +17,25 @@ import java.util.ArrayList;
  */
 
 public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> {
-    private ArrayList<String> rvData;
-     public RecycleAdapter(ArrayList<String> inputData){
+
+    private ArrayList<Pribadi> rvData;
+
+     public RecycleAdapter(ArrayList<Pribadi> inputData){
+
          rvData = inputData;
      }
      public class ViewHolder extends RecyclerView.ViewHolder{
 
          public TextView tvTitle;
          public TextView tvSubtitle;
+         public TextView tvJam;
          public LinearLayout tvButton;
          public ViewHolder(View itemView) {
              super(itemView);
              tvTitle = (TextView) itemView.findViewById(R.id.tv_title);
              tvSubtitle = (TextView) itemView.findViewById(R.id.tv_subtitle);
-             tvButton = (LinearLayout)itemView.findViewById(R.id.item_list);
+             tvJam =(TextView) itemView.findViewById(R.id.tv_jam);
+             tvButton = (LinearLayout)itemView.findViewById(R.id.tv_item);
          }
      }
      @Override
@@ -39,14 +47,18 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        final String name = rvData.get(position);
-        holder.tvTitle.setText(rvData.get(position));
-        holder.tvSubtitle.setText("Frau "+position);
+
+        final Pribadi pribadi = rvData.get(position);
+
+        holder.tvTitle.setText(pribadi.getJudul());
+        holder.tvSubtitle.setText(pribadi.getTanggal());
+        holder.tvJam.setText(pribadi.getTanggal());
         holder.tvButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("data ke - "+rvData.get(position));
+
             }
+
         });
     }
 

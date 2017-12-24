@@ -1,10 +1,8 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/activity_to_do"
-    android:background="@color/colorWhite"
-    android:padding="4dp"
     tools:context="com.example.lanarahim.notetakers.BisnisFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,5 +11,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical" />
-
 </FrameLayout>

@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.lanarahim.notetakers.Data.Pribadi;
+
 import java.util.ArrayList;
 
 
@@ -18,7 +20,7 @@ public class BisnisFragment extends Fragment {
     private RecyclerView rvView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<String> dataSet;
+    private ArrayList<Pribadi> dataSet;
 
     public BisnisFragment(){
 
@@ -42,7 +44,9 @@ public class BisnisFragment extends Fragment {
         rvView.setAdapter(adapter);
         return viewRoot;
     }
+
     private void initDataset(){
+
 
     }
 }

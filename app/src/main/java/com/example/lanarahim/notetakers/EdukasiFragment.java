@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.lanarahim.notetakers.Data.Pribadi;
+
 import java.util.ArrayList;
 
 
@@ -18,7 +20,7 @@ public class EdukasiFragment extends Fragment {
     private RecyclerView rvView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<String> dataSet;
+    private ArrayList<Pribadi> dataSet;
 
     public EdukasiFragment(){
 
@@ -32,7 +34,7 @@ public class EdukasiFragment extends Fragment {
         dataSet = new ArrayList<>();
         initDataset();
 
-        rvView = (RecyclerView) viewRoot.findViewById(R.id.rv_main_bisnis);
+        rvView = (RecyclerView) viewRoot.findViewById(R.id.rv_main_edukasi);
         rvView.setHasFixedSize(true);
 
         layoutManager = new LinearLayoutManager(getActivity());
@@ -42,7 +44,8 @@ public class EdukasiFragment extends Fragment {
         rvView.setAdapter(adapter);
         return viewRoot;
     }
+
     private void initDataset(){
-        dataSet.add("hghj");
+
     }
 }
